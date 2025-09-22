@@ -33,8 +33,8 @@ void menu() {
     do {
         system("cls");
         printf("PILHA\n");
-        printf("\n1 - EMPILHAR\n");
-        printf("2 - DESEMPILHAR\n");
+        printf("\n1 - EMPILHAR ELEMENTO\n");
+        printf("2 - DESEMPILHAR ELEMENTO\n");
         printf("\n3 - IMPRIMIR TOPO\n");
         printf("4 - IMPRIMIR PILHA\n");
         printf("\n0 - SAIR\n");
