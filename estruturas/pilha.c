@@ -11,8 +11,8 @@ void menu();
 
 Pilha *inicializa();
 
-int push(Pilha **pilha, int elemento);
-int pop(Pilha **pilha);
+int empilha(Pilha **pilha, int elemento);
+int desempilha(Pilha **pilha);
 
 void topo(Pilha **pilha);
 void imprimePilha(Pilha **pilha);
@@ -47,11 +47,11 @@ void menu() {
 
         case 1:
             scanf("%d", &elemento);
-            push(&pilha, elemento);
+            empilha(&pilha, elemento);
             break;
 
         case 2:
-            pop(&pilha);
+            desempilha(&pilha);
             break;
 
         case 3:
@@ -82,7 +82,7 @@ Pilha *inicializa() {
     return NULL;
 }
 
-int push(Pilha **pilha, int elemento) {
+int empilha(Pilha **pilha, int elemento) {
     Pilha *pilhaNova = (Pilha *)malloc(sizeof(Pilha));
 
     if (pilhaNova == NULL) {
@@ -96,7 +96,7 @@ int push(Pilha **pilha, int elemento) {
     return 0;
 }
 
-int pop(Pilha **pilha) {
+int desempilha(Pilha **pilha) {
     if (*pilha == NULL) {
         return 1;
     }
