@@ -23,7 +23,7 @@ int main() {
         int num = 0;
         scanf("%d", &num);
 
-        F = empilhar(F, num);
+        F = enfileirar(F, num);
     }
 
     int L = 0;
@@ -76,9 +76,9 @@ Fila *duplicar_pares(Fila *F, int L) {
     Fila *F_novo = (Fila *)malloc(sizeof(Fila));
 
     while (F != NULL) {
-        F_novo = empilhar(F_novo, F->info);
+        F_novo = enfileirar(F_novo, F->info);
         if ((F->info % 2) == 0 && F->info <= L) {
-            F_novo = empilhar(F_novo, F->info);
+            F_novo = enfileirar(F_novo, F->info);
         }
 
         F = F->prox;
